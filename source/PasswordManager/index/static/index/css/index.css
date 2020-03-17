@@ -1,0 +1,338 @@
+/* 全局样式 */
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    /* color: #CCCCCC; */
+    outline: none;
+}
+body {
+    background-color: #858585;
+}
+
+
+
+/* SVG加载中图片 */
+.svg-loading-search {
+    background-image: url(../images/search-40x40px.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.svg-loading-loading {
+    background-image: url(../images/loading-40x40px.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+
+/* 菜单栏样式 */
+nav {
+    background-color: #252323;
+    height: 60px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #808080;
+}
+nav #logo {
+    height: 100%;
+    min-width: 200px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+nav #search {
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: calc(100% - 6em - 200px);
+}
+nav #search > input {
+    height: 70%;
+    min-width: calc(100% - 5em);
+    background-color: #444444;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px 0px 0px 5px;
+    color: #d1d1d1;
+}
+nav #search > button {
+    height: 70%;
+    width: 5em;
+    background-color: #4c8169;
+    border-radius: 0px 5px 5px 0px;
+    color: #d1d1d1;
+    cursor: pointer;
+}
+#function-box-new-account {
+    height: 70%;
+    width: 5em;
+    background-color: #4c8169;
+    margin-right: 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #d1d1d1;
+}
+
+
+
+/* 内容容器样式 */
+#content {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+/* 分类列表样式*/
+#classification {
+    height: calc(100vh - 60px);
+    width: 100%;
+    max-width: 200px;
+    background-color: #252323;
+    color: #808080;
+}
+#classification > ul {
+    margin-bottom: 10px;
+}
+#classification li {
+    list-style-type: none;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    cursor: pointer;
+    height: 2em;
+    padding-left: 5px;
+}
+#classification li > span {
+    padding-left: 5px;
+}
+#classification li > svg {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+#classification-manage-function-button {
+    width: 100%;
+    height: 2.5em;
+    background-color: #35443c;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#classification-manage-function-button > span {
+    margin-left: 5px;
+}
+
+
+/* 账户表格样式 */
+#account-table {
+    width: calc(100% - 200px);
+    height: calc(100vh - 60px);
+    overflow-y: scroll;
+}
+#account-table table {
+    width: 100%;
+    border-collapse:collapse;
+}
+.table-bright {
+    background-color: #303030;
+}
+.table-dark {
+    background-color: #2c2c2c
+}
+#account-table tr {
+    height: 3em;
+    text-align: center;
+}
+#account-table th {
+    background-color: #1d1c1c;
+    height: 3em;
+    color:  #adadad;
+    border: 0px;
+}
+#account-table tr:hover {
+    background-color: #1f1f1f;
+    cursor:pointer;
+}
+#account-table td {
+    color: #808080;
+}
+
+
+
+
+/* 弹窗样式 */
+#popupOcclude {
+    width: 100%;
+    height: 100%;
+    background:rgba(17, 17, 17, 0.8);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+#popupBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+#popup {
+    position: relative;
+    overflow: auto;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #DDDDDD;
+}
+#popupClose {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s;
+}
+#popupClose:hover {
+    transform: rotate(180deg);
+}
+
+
+/* 账号弹窗样式 */
+#popup {
+    color: #797979;
+}
+#popup h3 {
+    text-align: center;
+    padding-right: 10px;
+    color: #797979;
+}
+#popup ul {
+    list-style-type: none;
+}
+#popup > ul > li{
+    margin-top: 5px;
+    list-style-type: none;
+    color: #797979;
+}
+#popup > ul > li > ul{
+    padding: 0.2em;
+}
+#popup .prompt {
+    display: inline-block;
+    height: 1.7em;
+    line-height: 1.7em;
+    border: 1px solid #666666;
+    border-radius: 5px 0px 0px 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1em;
+    color: #797979;
+}
+#popup input[type="text"] {
+    line-height: 1.7em;
+    width: 20em;
+    border-right: 1px solid #666666;
+    border-top: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+    vertical-align: top;
+    font-size: 0.93em;
+    padding-left: 5px;
+    padding-right: 5px;
+    outline: none;
+    border-radius: 0px 5px 5px 0px;
+    color: #797979;
+}
+#popup .classification {
+    border: 1px solid #666666;
+    color: #797979;
+}
+#popup textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+    color: #5f5f5f;
+    font-size: 0.8em;
+    padding: 5px;
+    color: #797979;
+}
+#popup #accounFunctionButton{
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+#popup #accounFunctionButton > button {
+    width: 6em;
+    height: 2.5em;
+    border-radius: 5px;
+    color: #CCCCCC;
+}
+#popup #function-button-account-save {
+    background-color: #a19b49;
+}
+#popup #function-button-account-remove {
+    background-color: #8b4646;
+}
+#popup #function-button-account-add {
+    background-color: #4c8169;
+}
+
+
+
+/* 分类管理弹窗样式 */
+#classification-popup > h3 {
+    width: 100%;
+    display: inline-block;
+    color: #6d6d6d;
+    text-align: center;
+}
+#classification-popup table {
+    border-collapse:collapse;
+    color: #6d6d6d;
+    margin-top: 10px;
+}
+#classification-popup td > input {
+    height: 2em;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 2px;
+    color: #6d6d6d;
+    border-radius: 5px;
+}
+.function-button-remove-classification {
+    width: 4em;
+    height: 2em;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: #8b4646;
+    color: #CCCCCC;
+}
+#functionButton {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around; 
+    margin-top: 5px;
+}
+#functionButton > button {
+    width: 6em;
+    height: 2em;
+    border-radius: 5px;
+    color: #CCCCCC;
+}
+#function-button-add-classification {
+    background-color: #4c8169;
+}
+#function-button-save-classification {
+    background-color: #a19b49;
+}
