@@ -3,7 +3,7 @@
 
 这是一个使用 `Python3.7 + Django` 框架构建的密码管理器，支持密码的`增` `删` `查` `改` 以及对密码进行简单的`分类管理`。
 
-![](images\1.png)
+![](https://github.com/Code5-HGZ/PasswordManager/blob/master/images/1.png)
 
 
 
