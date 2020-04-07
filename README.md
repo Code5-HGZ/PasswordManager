@@ -35,25 +35,6 @@ python PasswordManager\manage.py runserver 0.0.0.0:1234
 python PasswordManager\manage.py runserver 0.0.0.0:您要设置的端口
 ```
 
-#### MAC OS
-
-在`MacOS` 平台下，我也打包了`莽夫的密码管理器`，如果你使用`MacOS`系统，您可以下载项目中`package/MacOS.zip`压缩包。
-
-将该压缩包下载到您的`MacOS`后解压，切换到解压后的目录中，使用命令`/bin/bash ./start.sh`运行shell脚本，此时`莽夫的密码管理器`将会开启，接下来您可以在浏览器访问`127.0.0.1:1234`来使用`莽夫的密码管理器`。
-
-如果你您想在后台运行`莽夫的密码管理器`，使用命令`/bin/bash ./startToBackstage.sh`，将`莽夫的密码管理器`开启并在后台运行
-
-`莽夫的密码管理器`默认使用端口`1234`， 如果你想更改端口，请编辑`start.sh`将
-
-```bash
-python PasswordManager\manage.py runserver 0.0.0.0:1234
-```
-
-修改为
-
-```bash
-python PasswordManager\manage.py runserver 0.0.0.0:您要设置的端口
-```
 
 #### Linux或其他操作系统
 
